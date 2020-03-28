@@ -7,7 +7,7 @@ public class LoginPage {
 
 	private By emailLocator = By.id("input-email");
 	private By passwordLocator = By.id("input-password");
-	private By LoginLocator = By.xpath("//input[@value='Login']");
+	private By loginLocator = By.xpath("//input[@value='Login']");
 
 	private WebDriver driver;
 
@@ -15,18 +15,18 @@ public class LoginPage {
 		this.driver = driver;
 	}
 
-//Enter username for login
-	public void enteremail(String email) {
+//Enter Username for login
+	public void enterEmail(String email) {
 		driver.findElement(emailLocator).sendKeys(email);
 	}
 
 	// enter password for login
-	public void enterpassword(String password) {
+	public void enterPassword(String password) {
 		driver.findElement(passwordLocator).sendKeys(password);
 	}
 
 	// click on login
 	public void clickOnLogin() {
-		driver.findElement(LoginLocator).click();
+		driver.findElement(loginLocator).click();
 	}
 }

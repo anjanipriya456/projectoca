@@ -6,10 +6,10 @@ import org.openqa.selenium.WebDriver;
 public class SearchPage {
 
 	private By searchLoc = By.xpath("//input[@type='text']");
-	private By searchboxLoc = By.xpath("(//button[@type='button'])[4]");
-	private By SearchTitleLoc = By.xpath("//a[text()='Samsung SyncMaster 941BW']");
-	private By SearchTitleLoc2 = By.xpath("//a[text()='Samsung Galaxy Tab 10.1']");
-	private By invalidsearchLoc = By.xpath("//p[text()='There is no product that matches the search criteria.']");
+	private By searchBoxLoc = By.xpath("(//button[@type='button'])[4]");
+	private By searchTitleLoc = By.xpath("//a[text()='Samsung SyncMaster 941BW']");
+	private By searchTitleLoc2 = By.xpath("//a[text()='Samsung Galaxy Tab 10.1']");
+	private By invalidSearchLoc = By.xpath("//p[text()='There is no product that matches the search criteria.']");
 
 	private WebDriver driver;
 
@@ -18,29 +18,29 @@ public class SearchPage {
 	}
 
 //search for valid products
-	public void searchText(String productname) {
-		driver.findElement(searchLoc).sendKeys(productname);
+	public void searchText(String productName) {
+		driver.findElement(searchLoc).sendKeys(productName);
 	}
 
 //search for invalid products
 	public void searchBox() {
-		driver.findElement(searchboxLoc).click();
+		driver.findElement(searchBoxLoc).click();
 	}
 
 //printing valid search text
 	public String getSearchRelatedTitle() {
-		String actualTitle = driver.findElement(SearchTitleLoc).getText();
+		String actualTitle = driver.findElement(searchTitleLoc).getText();
 		return actualTitle;
 	}
 
 //printing invalid search text
 	public String getSearchRelatedTitle2() {
-		String actualTitle = driver.findElement(SearchTitleLoc2).getText();
+		String actualTitle = driver.findElement(searchTitleLoc2).getText();
 		return actualTitle;
 	}
 
 	public String getinvalidSearchRelatedTitle() {
-		String actualTitle = driver.findElement(invalidsearchLoc).getText();
+		String actualTitle = driver.findElement(invalidSearchLoc).getText();
 		return actualTitle;
 	}
 

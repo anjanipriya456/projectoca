@@ -7,11 +7,11 @@ import org.openqa.selenium.interactions.Actions;
 
 public class LapTopPage {
 
-	private By LapTopClick = By.linkText("Laptops & Notebooks");
-	private By AllLapTopClickLoc = By.linkText("Show All Laptops & Notebooks");
-	private By HPcompareLoc = By.xpath("//i[@class='fa fa-exchange']");
-	private By MaccompareLoc = By.xpath("(//button[@type='button'])[14]");
-	private By SonycompareLoc = By.xpath("(//i[@class='fa fa-exchange'])[5]");
+	private By lapTopClick = By.linkText("Laptops & Notebooks");
+	private By allLapTopClickLoc = By.linkText("Show All Laptops & Notebooks");
+	private By hpCompareLoc = By.xpath("//i[@class='fa fa-exchange']");
+	private By macCompareLoc = By.xpath("(//button[@type='button'])[14]");
+	private By sonyCompareLoc = By.xpath("(//i[@class='fa fa-exchange'])[5]");
 	private By comparisionListLoc = By.xpath("//a[text()='product comparison']");
 
 	private WebDriver driver;
@@ -22,28 +22,28 @@ public class LapTopPage {
 
 	// Click on Laptops and Notebooks
 	public void clickOnLaptopsandNotebooks() {
-		driver.findElement(LapTopClick).click();
+		driver.findElement(lapTopClick).click();
 	}
 
 	// click on show all laptops and desktops
 	public void clickOnShowAll() {
 		Actions actions = new Actions(driver);
-		actions.moveToElement(driver.findElement(AllLapTopClickLoc)).pause(1000).doubleClick().build().perform();
+		actions.moveToElement(driver.findElement(allLapTopClickLoc)).pause(1000).doubleClick().build().perform();
 	}
 
 	// click on hp model laptop compare icon
 	public void hpCompare() {
-		driver.findElement(HPcompareLoc).click();
+		driver.findElement(hpCompareLoc).click();
 	}
 
 //click on macbook model laptop compare icon
 	public void macCompare() {
-		driver.findElement(MaccompareLoc).click();
+		driver.findElement(macCompareLoc).click();
 	}
 
 //click on sony model laptop compare icon
 	public void sonyCompare() {
-		driver.findElement(SonycompareLoc).click();
+		driver.findElement(sonyCompareLoc).click();
 	}
 
 //Comparision table for selected model laptops

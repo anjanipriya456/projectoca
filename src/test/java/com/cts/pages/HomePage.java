@@ -7,11 +7,11 @@ import org.openqa.selenium.interactions.Actions;
 public class HomePage {
 
 	private By myAccLocator = By.xpath("//a[@title='My Account']");
-	private By RegisterLocator = By.xpath("//a[text()='Register']");
-	private By LoginLocator = By.xpath("//a[text()='Login']");
-	private By AccTitleLoc=By.linkText("My Account");
-	private By CamClickLoc=By.linkText("Cameras");
-	private By IpodTouchWishListLoc=By.xpath("(//button[@type='button'])[19]");
+	private By registerLocator = By.xpath("//a[text()='Register']");
+	private By loginLocator = By.xpath("//a[text()='Login']");
+	private By accTitleLoc=By.linkText("My Account");
+	private By camClickLoc=By.linkText("Cameras");
+	private By ipodTouchWishListLoc=By.xpath("(//button[@type='button'])[19]");
 	
 	private WebDriver driver;
 
@@ -29,20 +29,20 @@ public class HomePage {
 	//click on login
 	public void clickOnLogin() 
 	{
-		driver.findElement(LoginLocator).click();
+		driver.findElement(loginLocator).click();
 	}
 	
 	//Printing the text that appear after login
 	public String getCurrentTitle()
 	{
-		String actualTitle=driver.findElement(AccTitleLoc).getText();
+		String actualTitle=driver.findElement(accTitleLoc).getText();
 		return actualTitle;
 	}
 	
 	//Click on cameras
 	public void clickOnCameras()
 	{
-		driver.findElement(CamClickLoc).click();
+		driver.findElement(camClickLoc).click();
 	}
 	
 	
